@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#RewriteRule compte/(.*)/(.*)/(.*)/(.*) router.php?l=$1&c=$2&a=$3&id=$4
+RewriteRule compte/(.*)/(.*)/(.*) router.php?l=$1&c=$2&a=$3
+RewriteRule search/(.*)/(.*)/(.*) router.php?l=$1&c=$2&a=$3
