@@ -66,15 +66,15 @@ class employe {
             $contractuel->CONTRACTUEL_CODE = $_POST['txt_CONTRACTUEL_CODE'];
 
 
-            $sol=$contractuel->FindContractuel($contractuel->CONTRACTUEL_CODE);
+            $sol1=$contractuel->FindContractuel($contractuel->CONTRACTUEL_CODE);
             //$Sigaux_covid_image=$sol[0]['Sigaux_covid_image'];
-            $CONTRACTUEL_ID=$sol[0]['CONTRACTUEL_ID'];
-            $CONTRACTUEL_CODE=$sol[0]['CONTRACTUEL_CODE'];
-            $CONTRACTUEL_NOM=$sol[0]['CONTRACTUEL_NOM'];
-            $CONTRACTUEL_CODE_GROUPE=$sol[0]['CONTRACTUEL_CODE_GROUPE'];
-            $CONTRACTUEL_CODE_HORAIRE=$sol[0]['CONTRACTUEL_CODE_HORAIRE'];
-            $CONTRACTUEL_PRESENCE=$sol[0]['CONTRACTUEL_PRESENCE'];
-            $CONTRACTUEL_CREATED=$sol[0]['CONTRACTUEL_CREATED'];
+            $CONTRACTUEL_ID=$sol1[0]['CONTRACTUEL_ID'];
+            $CONTRACTUEL_CODE=$sol1[0]['CONTRACTUEL_CODE'];
+            $CONTRACTUEL_NOM=$sol1[0]['CONTRACTUEL_NOM'];
+            $CONTRACTUEL_CODE_GROUPE=$sol1[0]['CONTRACTUEL_CODE_GROUPE'];
+            $CONTRACTUEL_CODE_HORAIRE=$sol1[0]['CONTRACTUEL_CODE_HORAIRE'];
+            $CONTRACTUEL_PRESENCE=$sol1[0]['CONTRACTUEL_PRESENCE'];
+            $CONTRACTUEL_CREATED=$sol1[0]['CONTRACTUEL_CREATED'];
         }
         $sol = $contractuel->listeContractuel();
         //var_dump($sol);

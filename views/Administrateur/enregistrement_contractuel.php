@@ -203,18 +203,42 @@ if(isset($_SESSION['user_id']))
                                                 <button name="btn_enregistrer" type="submit" class="btn btn-primary" style="margin-left: 45%">Enregistrer</button>
 
                                                 </div>
-                                                <div class="col-md-3"> 
+                                                <?php
+                                        if (isset($sol1)) {
+                                      if ($_SESSION['role']=="Administrateur") {
+                                                    ?>
+                                                        <div class="col-md-3"> 
                                                 <button name="btn_modifier" type="submit" class="btn btn-success" style="margin-left: 45%">Modifier</button>
 
                                                 </div>
+                                                <?php
+                                                      }
+                                                      }
+                                                    ?>
+                                                    <?php
+                                      if ($_SESSION['role']=="Administrateur") {
+                                        if (isset($sol1)) {
+                                                    ?>
                                                 <div class="col-md-3"> 
                                                 <button name="btn_supprimer" type="submit" class="btn btn-danger" style="margin-left: 45%">Supprimer</button>
 
                                                 </div>
+                                                <?php
+                                                      }
+                                                      }
+                                                    ?>
+                                                     <?php
+                                      if ($_SESSION['role']=="Administrateur") {
+                                            if (isset($sol1)) {
+                                                    ?>
                                                 <div class="col-md-3"> 
                                                 <button name="btn_actualiser" type="submit" class="btn btn-default" style="margin-left: 45%">Actualiser</button>
 
                                                 </div>
+                                                <?php
+                                                      }
+                                                      }
+                                                    ?>
                                                 </div>
                                          </form>
                             
