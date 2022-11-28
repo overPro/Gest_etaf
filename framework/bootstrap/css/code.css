@@ -1,0 +1,159 @@
+.pane-content{
+  height: 100px;
+  overflow: auto;
+color:red;
+}
+
+
+.text-title{
+    padding: 3px;
+    font-weight: bold;
+    color:#ffffff;
+    background-color: #419F2E;
+    font-size: 17px;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+/*
+formulaires des questionnaires
+*/
+.zone_question
+{
+  margin-top:10px;
+    border: 2px solid #419F2E;
+    padding: 5px;
+    border-radius:2px ;
+}
+.zone_reponse
+{
+  margin-top:10px;
+    border: 2px solid #419F2E;
+    padding: 5px;
+    border-radius:2px ;
+}
+.zone_resultat
+{
+  margin-top:10px;
+    border: 2px solid #419F2E;
+    padding: 5px;
+    border-radius:2px ;
+}
+
+#theme_select{
+  background-color:#cdd;
+  font-size: 18px;
+  height: 40px;
+  font-weight: bold;
+}
+
+#libelle_quest_2{
+  background-color:#cdd;
+  font-size: 18px;
+  height: 40px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.reponse_zone{
+  margin-top: 6px;
+}
+
+.lien_qcm{
+  color:#333;
+  font-weight: bold;
+}
+
+.field_questionnaire{
+  border:2px solid #419F2E;
+
+}
+
+.field_questionnaire legend{
+  background: #419F2E;
+  width: 95%;
+  color: #FFF;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.rep_quest
+{
+  margin-bottom: 5px;
+}
+
+.reponse{
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+  background: #eee;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.choix_reponse:checked ~ .reponse{
+  color:blue;
+}
+
+.display_note{
+  font-weight: bold;
+  color:red;
+}
+
+.bonne_reponse{
+  color:#FFF;
+  font-weight:bolder;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+  background: #2ECC71;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.mauvaise_reponse{
+  color:#FFF;
+  font-weight:bolder;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+  background: #CF000F;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}

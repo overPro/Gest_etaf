@@ -1,0 +1,21 @@
+if (isset($_FILES['txt_file']) AND ! empty($_FILES['txt_file']['name'])) {
+            $tailleMax = 52428800; //50 Mo	
+            $extensionsValides = array('jpg', 'jpeg', 'png', 'gif', 'avi', 'mp4', 'flv', 'mkv', 'doc', 'docx', 'pdf', 'xps');
+            $extensionsImages = array('jpg', 'jpeg', 'png', 'gif');
+            $extensionsVideos = array('avi', 'mp4', 'flv', 'mkv');
+            $extensionsDocs = array('doc', 'docx', 'pdf', 'xps');
+            if ($_FILES['txt_file']['size'] <= $tailleMax) {
+                $extensionUpload = strtolower(substr(strrchr($_FILES['txt_file']['name'], '.'), 1));
+                if (in_array($extensionUpload, $extensionsValides)) {
+                    if (in_array($extensionUpload, $extensionsDocs)) {
+                        $way = "../Files/Docs/" . $_FILES['txt_file']['name'];
+                        $res = move_uploaded_file($_FILES['txt_file']['tmp_name'], $way);
+                    }
+                    if (in_array($extensionUpload, $extensionsImages)) {
+                        $way = "../Files/Images/" . $_FILES['txt_file']['name'];
+                        $res = move_uploaded_file($_FILES['txt_file']['tmp_name'], $way);
+                    }
+                    if (in_array($extensionUpload, $extensionsVideos)) {
+                        $way = "../Files/Videos/" . $_FILES['txt_file']['name'];
+                        $res = move_uploaded_file($_FILES['txt_file']['tmp_name'], $way);
+                    }

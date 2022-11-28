@@ -81,7 +81,7 @@ class contractuelmodel {
         $l = $req->fetchAll();
         return $l;
     }
-    public function FindContractuel($date1,$date2) {
+    public function FindContractuelByDate($date1,$date2) {
         $req = $this->con->prepare('SELECT * FROM contractuel WHERE CONTRACTUEL_CREATED BETWEEN :date1 AND :date2 ');
         $req->bindParam(':date1', $date1);
         $req->bindParam(':date2', $date2);

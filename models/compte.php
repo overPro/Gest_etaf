@@ -27,6 +27,13 @@ class comptemodel {
         //var_dump($sol);
         return $sol;
     }
+    public function compteId() {
+        $req = $this->con->prepare('SELECT * FROM compte WHERE COMPTE_CODE = :l');
+        $req->bindParam(':l', $this->COMPTE_CODE);
+        $req->execute();
+        $l = $req->fetchAll();
+        return $l;
+    }
 
     public function ajouterCompte() {
         $req = $this->con->prepare('INSERT INTO compte VALUES (null,:COMPTE_ROLE, :COMPTE_NOM, :COMPTE_LOGIN, :COMPTE_PASS, :COMPTE_CODE, :COMPTE_STATUS,:COMPTE_EMAIL,:COMPTE_NUMERO,:COMPTE_PHOTO,:COMPTE_CREATED)');
@@ -79,7 +86,7 @@ class comptemodel {
         $l = $req->fetchAll();
         return $l;
     }
-    public function FindCompte($date1,$date2) {
+    public function FindCompteByDate($date1,$date2) {
         $req = $this->con->prepare('SELECT * FROM compte WHERE COMPTE_CREATED BETWEEN :date1 AND :date2 ');
         $req->bindParam(':date1', $date1);
         $req->bindParam(':date2', $date2);
@@ -96,9 +103,9 @@ class comptemodel {
         return $l;
     }
 
-}
 
-public function modifiercompte_avec_photo() {
+
+    public function modifiercompte_avec_photo() {
     $req = $this->con->prepare('UPDATE compte SET COMPTE_ROLE=:COMPTE_ROLE, COMPTE_NOM=:COMPTE_NOM, COMPTE_LOGIN=:COMPTE_LOGIN, COMPTE_PASS=:COMPTE_PASS, COMPTE_STATUS=:COMPTE_STATUS,COMPTE_EMAIL=:COMPTE_EMAIL,COMPTE_NUMERO=:COMPTE_NUMERO;COMPTE_PHOTO=:COMPTE_PHOTO WHERE COMPTE_CODE=:COMPTE_CODE');
     $req->bindParam(':COMPTE_ROLE', $this->COMPTE_ROLE);
     $req->bindParam(':COMPTE_NOM', $this->COMPTE_NOM);
@@ -144,5 +151,6 @@ public function modifiercompte_sans_photo() {
         <?php
 
     }
+}
 }
 ?>
